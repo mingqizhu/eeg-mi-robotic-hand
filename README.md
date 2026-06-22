@@ -1,3 +1,22 @@
+# EEG Motor-Imagery Controlled Robotic Hand
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Python 3.14](https://img.shields.io/badge/python-3.14-blue.svg)](https://www.python.org/)
+
+> A real-time brain-computer interface that decodes **motor-imagery EEG**
+> (grasp / hold / rest) from a 21-channel dry headset and drives a
+> self-designed 3D-printed robotic hand. Independently designed and implemented.
+
+![demo](media/demo.gif)
+
+## What it does
+
+The user *imagines* grasping or releasing. An EEGNet classifier decodes the
+intention from live EEG in real time, a majority-voting buffer smooths the
+output, and the predicted command is streamed over serial to an Arduino that
+actuates a 3D-printed hand — closing the full brain → hand loop.
+
+## How it works
 ## Tech stack
 
 - **Signal / ML:** Python 3.14, PyTorch (EEGNet), MNE-Python, NumPy
