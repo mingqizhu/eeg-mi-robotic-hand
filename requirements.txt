@@ -1,0 +1,5 @@
+numpy
+mne
+torch
+pylsl
+scipy
