@@ -2,6 +2,8 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Python 3.14](https://img.shields.io/badge/python-3.14-blue.svg)](https://www.python.org/)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20791784.svg)](https://doi.org/10.5281/zenodo.20791784)
+
 
 > A real-time brain-computer interface that decodes **motor-imagery EEG**
 > (grasp / hold / rest) from a 21-channel dry headset and drives a
