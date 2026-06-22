@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "EEG Motor-Imagery Controlled Robotic Hand"
+abstract: "A real-time brain-computer interface that decodes motor-imagery EEG (grasp / hold / rest) from a 21-channel dry headset and drives a self-designed 3D-printed robotic hand."
+authors:
+  - family-names: "Zhu"
+    given-names: "Mingqi"
+    orcid: "https://orcid.org/0009-0009-1593-3122"
+type: software
+version: 1.0.0
+date-released: 2026-06-22
+url: "https://github.com/mingqizhu/eeg-mi-robotic-hand"
+keywords:
+  - brain-computer-interface
+  - motor-imagery
+  - EEG
+  - robotic-hand
+  - real-time-control
+  - EEGNet
