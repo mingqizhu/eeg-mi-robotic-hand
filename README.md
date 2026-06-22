@@ -7,7 +7,7 @@
 > (grasp / hold / rest) from a 21-channel dry headset and drives a
 > self-designed 3D-printed robotic hand. Independently designed and implemented.
 
-![demo](media/demo.gif)
+![demo](demo.gif)
 
 ## What it does
 
@@ -17,6 +17,26 @@ output, and the predicted command is streamed over serial to an Arduino that
 actuates a 3D-printed hand — closing the full brain → hand loop.
 
 ## How it works
+
+```
+CGX Quick-20r v2 (21ch dry EEG)
+        │   live stream
+        ▼
+  Preprocessing / band-pass filtering   (preprocessing.py)
+        │
+        ▼
+  ASR artifact removal
+        │
+        ▼
+  EEGNet classifier  →  GRASP / HOLD / REST   (model.py, best_model.pth)
+        │   per-class probabilities
+        ▼
+  Majority-voting buffer (temporal smoothing)
+        │
+        ▼
+  Serial command  →  Arduino  →  servos  →  3D-printed hand   (control.py)
+```
+
 ## Tech stack
 
 - **Signal / ML:** Python 3.14, PyTorch (EEGNet), MNE-Python, NumPy
